@@ -1,0 +1,35 @@
+<!-- src/main/resources/templates/admin-dashboard.html -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.userId}">ID</td>
+                <td th:text="${user.firstName}">First Name</td>
+                <td th:text="${user.lastName}">Last Name</td>
+                <td th:text="${user.dob}">Date of Birth</td>
+                <td th:text="${user.phoneNo}">Phone Number</td>
+                <td th:text="${user.emailId}">Email</td>
+                <td th:text="${user.address}">Address</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
